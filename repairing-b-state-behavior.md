@@ -18,7 +18,7 @@ mkdir ~/scripts
 cd ~/scripts
 ```
 
-# Step 3
+## Step 3
 After creation, create a .sh script file, this can be named whatever you'd like. Fill the sh script with the following contents...
 ```
 #!/bin/bash
@@ -42,7 +42,7 @@ case "$1" in
     ;;
 esac
 ```
-# Step 4
+## Step 4
 Run the following commands to install your .sh script to its final directory:
 ```
 install -Dm755 ~/scripts/yourShFileName.sh -t ${pkgdir}/usr/lib/systemd/system-sleep
@@ -50,7 +50,7 @@ install -Dm755 ~/scripts/yourShFileName.sh -t ${pkgdir}/usr/lib/systemd/system-s
 ***If you make any changes to the script in ~/scripts, re-run this command to replace the old script.***
 
 
-# Step 5
+## Step 5
 Run the following command and make sure the contents of the folder match the contents below:
 ```
 sudo nano /usr/lib/systemd/system/systemd-suspend.service
@@ -68,7 +68,7 @@ After=sleep.target
 Type=oneshot
 ExecStart=/usr/lib/systemd/systemd-sleep suspend
 ```
-# Step 6
+## Step 6
 Run the following command and make sure the "blacklist xpad" line has a # in front of it. LEAVE THE REST OF THE CONTENTS AS THEY ARE:
 ```
 sudo nano /etc/modprobe.d/xone-blacklist.conf
@@ -77,7 +77,7 @@ comment out the "blacklist xpad" line as follows
 ```
 #blacklist xpad
 ```
-# Step 7
+## Step 7
 Run the following commands, in this order:
 ```
 sudo systemctl disable --now steam-patch
