@@ -12,3 +12,6 @@ When installing ChimeraOS on ROG Allys there are 3 possible states of operation.
 ### [Installing Custom 6.5.0 Kernel by @NeroReflex](https://github.com/bactaholic/chimeraos-ROG-Ally-tricks/blob/main/installing_custom_6.5.0_kernel.md)
 ChimeraOS, at the time of writing this, installs with an older kernel, this 6.5.0 is compiled specifically for the ROG Ally and brings noticable performance improvements.
 
+### [Installing Custom steam-patch (by @NeroReflex) & Updating HandyGCCS](https://github.com/bactaholic/chimeraos-ROG-Ally-tricks/blob/main/installing_custom_steam_patch.md)
+The original version of steam-patch contains controller input fixes which conflict with the workaround for C State found [here](https://github.com/bactaholic/chimeraos-ROG-Ally-tricks/blob/main/repairing-b-state-behavior.md) as well as conflicting with HandyGCCS. This guide will install a custom version which removes the controller input fixes so HandyGCCS can handle them instead.
+
