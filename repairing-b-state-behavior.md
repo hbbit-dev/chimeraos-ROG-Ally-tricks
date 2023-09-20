@@ -1,6 +1,6 @@
 # Repairing B State Behavior v2.0
 ### Written by: [@bactaholic](https://github.com/bactaholic)
-### Method found by: [@NeroReflex](https://github.com/NeroReflex) and @WagesOf
+### Method developed by: [@NeroReflex](https://github.com/NeroReflex) and @WagesOf
 
 ## Disclaimer:
 I am not responsible for any damage to your system. This software is experimental, though there have been no recorded cases of damage, and everything done is reversible.
