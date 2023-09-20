@@ -4,4 +4,4 @@ Here is a community made repository of fixes, workarounds, patches, and upgrades
 
 # Directory
 
--Repairing A and B State behavior on ROG Ally
+-[Repairing A and B State behavior on ROG Ally](https://github.com/bactaholic/chimeraos-ROG-Ally-tricks/blob/main/repairing-b-state-behavior.md)
