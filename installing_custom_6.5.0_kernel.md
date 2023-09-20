@@ -1,5 +1,5 @@
 ## Introduction:
-There are several kernel's created for the ROG Ally, I (@bactaholic) have personally 6.5.0 to be the most stable at the time of writing this (9/20/23). This guide serves as an installation guide for [@NeroReflex](https://github.com/NeroReflex) custom 6.5.0 kernel.The majority of this guide is from a different gist originally, portions of which are outdated/conflict with other guides in this repository. You can find the original gist from [@NeroReflex](https://github.com/NeroReflex) [here](https://gist.github.com/NeroReflex/e546ca365b86d3ef226ea4a085bfae43)
+There are several kernel's created for the ROG Ally, I (@bactaholic) have personally 6.5.0 to be the most stable at the time of writing this (9/20/23). This guide serves as an installation guide for [@NeroReflex](https://github.com/NeroReflex) custom 6.5.0 kernel, and also includes the commands needed to downgrade back to 6.4.7 if needed. The majority of this guide is from a different gist originally, portions of which are outdated/conflict with other guides in this repository. You can find the original gist from [@NeroReflex](https://github.com/NeroReflex) [here](https://gist.github.com/NeroReflex/e546ca365b86d3ef226ea4a085bfae43)
 
 ## Get DKMS
 For dkms to work you will need base-devel as well as dkms itself.
