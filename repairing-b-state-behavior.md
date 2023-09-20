@@ -2,9 +2,11 @@
 ### Written by: [@bactaholic](https://github.com/bactaholic)
 ### Method found by: [@NeroReflex](https://github.com/NeroReflex) and @WagesOf
 
-## Disclaimer: I am not responsible for any damage to your system. This software is experimental, though there have been no recorded cases of damage, and everything done is reversible.
+## Disclaimer:
+I am not responsible for any damage to your system. This software is experimental, though there have been no recorded cases of damage, and everything done is reversible.
 
-## Introduction: This guide will provide a workaround for A or B state ROG Allys. This is a workaround that comes with some quirks. For example, after reawakening, your screen will go black, and then come back after a few seconds. Additionally, the first button you press may result in that input repeating itself until a 2nd button is pressed, at which point it the controls will return to normal. Aside from these two quirks, the workaround works perfectly.
+## Introduction:
+This guide will provide a workaround for A or B state ROG Allys. This is a workaround that comes with some quirks. For example, after reawakening, your screen will go black, and then come back after a few seconds. Additionally, the first button you press may result in that input repeating itself until a 2nd button is pressed, at which point it the controls will return to normal. Aside from these two quirks, the workaround works perfectly.
 
 ## Step 1
 Install ChiemraOS, you can use the stock version or upgrade your kernel to 6.5.0, 6.5.1, or 6.5.2 so long as your system is otherwise stable (with the exception of working QAM/Steam buttons).
