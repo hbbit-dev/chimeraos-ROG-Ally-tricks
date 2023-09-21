@@ -21,27 +21,23 @@ cd ~/scripts
 ## Step 3
 After creation, create a .sh script file, this can be named whatever you'd like. Fill the sh script with the following contents...
 ```
-#!/bin/bash
+/bin/bash -c "echo mem > /sys/power/state"
+sleep 1
 
-case "$1" in
-    pre)
-            # Code execution BEFORE sleeping/hibernating/suspending
-    ;;
-    post)
-           sleep 2
-           echo "Post suspend check for N-Key" > /dev/kmsg
-           if grep -Fxq 'ROG Ally' "/sys/devices/virtual/dmi/id/product_family" ; then
-                if [[ $(lsusb | grep "0b05:1abe") == "" ]]; then
-            echo "Post suspend reinit to find N-Key" > /dev/kmsg
-             echo platform > /sys/power/pm_test
-                    echo freeze > /sys/power/state
-                    echo none > /sys/power/pm_test
-                 fi
-            fi
-
-    ;;
-esac
+if grep -Fxq 'ROG Ally' "/sys/devices/virtual/dmi/id/product_family" && [[ $(lsusb | grep "0b05:1abe") == "" ]]; then
+    # Enable pm_test, freeze the system, and disable pm_test
+    echo platform > /sys/power/pm_test
+    echo freeze > /sys/power/state
+    echo none > /sys/power/pm_test
+    sleep 3
+fi
 ```
+
+and be sure to make it executable.
+```
+sudo chmod +x ~/scripts/yourShFileName.sh
+```
+
 ## Step 4
 Run the following commands to install your .sh script to its final directory:
 ```
@@ -49,6 +45,27 @@ install -Dm755 ~/scripts/yourShFileName.sh -t ${pkgdir}/usr/lib/systemd/system-s
 ```
 ***If you make any changes to the script in ~/scripts, re-run this command to replace the old script.***
 
+### Disclaimer:
+Some people have had issues with the previous installation method not running after waking the device from sleep. If the installation method described by step 4 does not work for you, then instead try the following:
+
+Create a new service file, for example myServiceFile.service, it can be named whatever you'd like. Fill the new service file with the following contents:
+
+```
+[Unit]
+Description=Try to get back the ROG Ally special keys
+After=sleep.target suspend.target
+
+[Service]
+ExecStart=~/scripts/yourShFileName.sh
+
+[Install]
+WantedBy=sleep.target suspend.target
+```
+
+then enable the service.
+```
+systemctl enable --now myServiceFile.service
+```
 
 ## Step 5
 Run the following command and make sure the contents of the folder match the contents below:
