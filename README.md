@@ -25,3 +25,12 @@ The original version of steam-patch contains controller input fixes which confli
 [Steam-Patch](https://github.com/Maclay74/steam-patch) and [NeroReflex Custom Steam-Patch](https://github.com/NeroReflex/steam-patch)
 
 [HandyGCCS](https://github.com/ShadowBlip/HandyGCCS)
+
+[EmuDeck](https://github.com/dragoonDorise/EmuDeck)
+
+## Helpful Comamnds
+
+Install DeckyLoader:
+```sh
+curl -L https://github.com/SteamDeckHomebrew/decky-installer/releases/latest/download/install_release.sh | sh
+```
