@@ -22,8 +22,10 @@ unzip llvm.zip
 ## Downloading the kernel
 The kernel has to be downloaded, yes, you guessed it... from my bedroom.
 
+
+### Kernel 6.4.7
 Kernel 6.4.7 got more testing, has horizon zero dawn performance regression but otherwise a 10% performance boost.
-Contreller after resume had a different behaviour for every person. For me sometimes I lost steam and guide buttons but never native-xbox buttons!
+Controller after resume had a different behaviour for every person. For me sometimes I lost steam and guide buttons but never native-xbox buttons!
 
 ```sh
 mkdir ~/kernel_6.4.7
@@ -32,6 +34,7 @@ wget http://neroreflex.duckdns.org/linux-chimeraos-6.4.7.chos4-1-x86_64.pkg.tar.
 wget http://neroreflex.duckdns.org/linux-chimeraos-headers-6.4.7.chos4-1-x86_64.pkg.tar.zst
 ```
 
+### Kernel 6.5.0
 Kernel 6.5.0 has (at the moment) very low in-game testing: who tested it reported a visible performance gain, in games and in switch emulator, tested with a zelda title!
 The known total number of people that installed this version is now 5.
 Might also have negative impact on some -untested- games (like horizon zero dawn).
@@ -81,5 +84,15 @@ Or you edit the bootloader configuration (this is the proper way, but you MUST b
 sudo nano /boot/loader/entries/frzr.conf
 #change the line "initrd /initramfs-linux.img" with "initrd /initramfs-linux-chimeraos.img"
 #change the line "linux /vmlinuz-linux" with "linux /vmlinuz-linux-chimeraos"
-# WARNING: Triple check you spelled file correctly or IT WILL NOT BOOT AND THE CONSOLE WILL BE DEAD!!!
 ```
+
+### WARNING:
+***Triple check you spelled file correctly or IT WILL NOT BOOT AND THE CONSOLE WILL BE DEAD!!!***
+
+After this simply...
+
+```sh
+systemctl reboot
+```
+
+And you should successfully boot into kernel 6.4.7 or 6.5.0!
