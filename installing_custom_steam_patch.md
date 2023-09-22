@@ -4,7 +4,7 @@
 This guide details how to install [@NeroReflex](https://github.com/NeroReflex) version of steam-patcher which removes the controller support but maintains the rest of the changes included such as TDP support and Icon Swapping. HandyGCCS is installed instead to handle the controller inputs. The following was taken from a gist originally written by [@NeroReflex](https://github.com/NeroReflex) which contains some outdated information which conflicts with other guides in this repository. These sections were taken from there as they do not conflict. The original gist can be found [here](https://gist.github.com/NeroReflex/e546ca365b86d3ef226ea4a085bfae43)
 
 ## TDP control
-To have TDP control working you use steam-patch. I have put together a steam-patch that only provides TDP control and does not manages buttons, so that you can use [AntiMicroX](https://github.com/AntiMicroX/antimicrox) to use joysticks to control mouse in desktop mode:
+I have put together a steam-patch that only provides TDP control and does not manages buttons, so that you can use [AntiMicroX](https://github.com/AntiMicroX/antimicrox) to use joysticks to control mouse in desktop mode, and to not interfere with HandyGCCS controller support:
 
 ```sh
 sudo systemctl stop steam-patch # don't worry if this fail. It's normal...
@@ -45,7 +45,7 @@ Then create the file ~/steam-patch-release/steam-patch.service...
 ```sh
 sudo nano ~/steam-patch-release/steam-patch.service
 ```
-And fill with the following content...
+And fill with the following contents...
 ```
 [Unit]
 Description=Steam Patches Loader
@@ -62,29 +62,40 @@ WorkingDirectory=/home/gamer/steam-patch
 WantedBy=multi-user.target
 ```
 
-### Disclaimer:
+***Disclaimer:***
 If you changed your username, swap "gamer" for your username in all instances "gamer" is used.
 
-and finally run:
+then copy the service file to its destination folder, and assign its proper owner
 
 ```sh
 cp ~/steam-patch-release/steam-patch.service "/etc/systemd/system/steam-patch.service"
+```
+```sh
 sudo chown root "/etc/systemd/system/steam-patch.service"
+```
 
-# Run service
+finally, run the service with...
+
+```sh
 sudo systemctl daemon-reload
-sudo systemctl enable steam-patch.service
+```
+```sh
+sudo systemctl enable steam-patch.
+```
+```sh
 sudo systemctl start steam-patch.service
 ```
 ## Updating HandyGCCS
-As my fork of steam-patch does not manages input it is important to update the handycon service:
+As [@NeroReflex](https://github.com/NeroReflex) fork of steam-patch does not manages input it is important to update the handycon service:
 
 ```sh
 sudo systemctl stop handycon
-# now your buttons should not be working!
+```
+```sh
 pikaur -Sy handygccs-git
+```
+```sh
 sudo systemctl enable --now handycon
-# now your buttons should be working again!
 ```
 
 If updating handycon fails with an error do the following and then try again to update:
@@ -92,3 +103,5 @@ If updating handycon fails with an error do the following and then try again to 
 ```sh
 sudo pacman -S python-setuptools
 ```
+
+You should now have full TDP control to exceed 15W within the Quick Access Menu in the Game Mode UI.
