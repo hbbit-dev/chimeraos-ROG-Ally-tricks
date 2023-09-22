@@ -1,3 +1,5 @@
+# Installing @NeroReflex Custom Steam Patch
+
 ## Introduction:
 This guide details how to install [@NeroReflex](https://github.com/NeroReflex) version of steam-patcher which removes the controller support but maintains the rest of the changes included such as TDP support and Icon Swapping. HandyGCCS is installed instead to handle the controller inputs. The following was taken from a gist originally written by [@NeroReflex](https://github.com/NeroReflex) which contains some outdated information which conflicts with other guides in this repository. These sections were taken from there as they do not conflict. The original gist can be found [here](https://gist.github.com/NeroReflex/e546ca365b86d3ef226ea4a085bfae43)
 
