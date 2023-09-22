@@ -6,20 +6,44 @@ To have TDP control working you use steam-patch. I have put together a steam-pat
 
 ```sh
 sudo systemctl stop steam-patch # don't worry if this fail. It's normal...
+```
+```sh
 sudo pacman -S rust
+```
+```sh
 cd ~
+```
+```sh
 mkdir src
+```
+```sh
 cd src
+```
+```sh
 git clone https://github.com/NeroReflex/steam-patch.git
+```
+```sh
 cd steam-patch
+```
+```sh
 cargo build --release
-mkdir ~/steam-patch
-sudo cp target/release/steam-patch ~/steam-patch/steam-patch
-chmod a+x ~/steam-patch/steam-patch
+```
+```sh
+mkdir ~/steam-patch-release
+```
+```sh
+sudo cp target/release/steam-patch ~/steam-patch-release/steam-patch
+```
+```sh
+chmod a+x ~/steam-patch-release/steam-patch
 ```
 
-Then create the file ~/steam-patch/steam-patch.service with the following content:
+Then create the file ~/steam-patch-release/steam-patch.service...
 
+```sh
+sudo nano ~/steam-patch-release/steam-patch.service
+```
+And fill with the following content...
 ```
 [Unit]
 Description=Steam Patches Loader
@@ -29,17 +53,20 @@ After=network.target
 [Service]
 Type=simple
 User=root
-ExecStart=${WORKING_FOLDER}/steam-patch --user=gamer
+ExecStart=/home/gamer/steam-patch-release/steam-patch --user=gamer
 WorkingDirectory=/home/gamer/steam-patch
 
 [Install]
 WantedBy=multi-user.target
 ```
 
+### Disclaimer:
+If you changed your username, swap "gamer" for your username in all instances "gamer" is used.
+
 and finally run:
 
 ```sh
-cp ~/steam-patch/steam-patch.service "/etc/systemd/system/steam-patch.service"
+cp ~/steam-patch-release/steam-patch.service "/etc/systemd/system/steam-patch.service"
 sudo chown root "/etc/systemd/system/steam-patch.service"
 
 # Run service
