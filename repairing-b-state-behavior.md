@@ -29,7 +29,6 @@ if grep -Fxq 'ROG Ally' "/sys/devices/virtual/dmi/id/product_family" && [[ $(lsu
     echo platform > /sys/power/pm_test
     echo freeze > /sys/power/state
     echo none > /sys/power/pm_test
-    sleep 3
 fi
 ```
 
