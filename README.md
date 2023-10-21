@@ -6,12 +6,8 @@ Some of the things you find in this guide may be unofficial changes to original 
 
 ### Legend
 [Stable]  - This process is commonly used by ROG Ally users and produces the expected result
-**if you have issues with stable guides, please open an issue request**
-
 
 [Dev]     - This process has been tested by a few developers and is stable enough for testing/use
-**if you have issues with dev guides, open an issue request with the tag [Dev Report]**
-
 
 [Testing] - This process is still undergoing testing, beware these may not work
 **these guides are either entirely untested or only tested on a select few devices, these guides may contain incomplete information, follow them at your own risk and please do not open issue requests for them**
