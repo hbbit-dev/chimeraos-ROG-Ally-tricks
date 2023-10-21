@@ -27,7 +27,8 @@ Once the system is unlocked, or if its already unlocked, run...
 
 And paste the following contents into it...
 
-```title chimeraos-<your_deployment>-nrflx gyro 
+```
+title chimeraos-<your_deployment>-nrflx gyro 
 linux /vmlinuz-linux-neroreflex
 initrd /amd-ucode.img
 initrd /initramfs-linux-neroreflex.img
