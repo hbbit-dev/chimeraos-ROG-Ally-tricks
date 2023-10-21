@@ -17,8 +17,9 @@ TODO: LINK
 
 ```sudo nano /boot/loader/entries/frzr.conf```
 
-Change the line "initrd /initramfs-linux.img" with "initrd /initramfs-linux-chimeraos.img"
-Change the line "linux /vmlinuz-linux" with "linux /vmlinuz-linux-chimeraos"
+-Change the line "initrd /initramfs-linux.img" to say "initrd /initramfs-linux-chimeraos.img"
+
+-Change the line "linux /vmlinuz-linux" to say "linux /vmlinuz-linux-chimeraos"
 
 ### WARNING:
 ***Triple check you spelled file correctly or IT WILL NOT BOOT AND THE CONSOLE WILL BE DEAD!!!***
