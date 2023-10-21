@@ -4,8 +4,11 @@ This guide will provide the nessecary steps to install the ROG Ally Specific 6.6
 ### Step 1 - Download packages
 
 ```mkdir ~/kernel_6.6.0-rc6```
+
 ```cd ~/kernel_6.6.0-rc6```
+
 ```wget http://neroreflex.duckdns.org/linux-neroreflex-6.6.0.rc6.nrflx1-1-x86_64.pkg.tar.zst```
+
 ```wget http://neroreflex.duckdns.org/linux-neroreflex-6.6.0.rc6.nrflx1-1-x86_64.pkg.tar.zst```
 
 ### Step 2 - Install packages via Pacman
