@@ -5,9 +5,17 @@ Here is a community made repository of fixes, workarounds, patches, and upgrades
 Some of the things you find in this guide may be unofficial changes to original software, such as custom kernel upgrades for ChimeraOS and modified versions of steam-patch. THESE PROJECTS ARE NOT SUPPORTED BY THE DEVELOPERS OF THOSE ORIGINAL PROJECTS.
 
 ### Legend
-[Stable]  - This process has been repeated numerous times with the same expected result
-[Dev]     - This process has been tested by a few developers and is stable enough for use, subject to change.
-[Testing] - This process is still undergoing testing
+[Stable]  - This process is commonly used by ROG Ally users and produces the expected result
+**if you have issues with stable guides, please open an issue request**
+
+
+[Dev]     - This process has been tested by a few developers and is stable enough for testing/use
+**if you have issues with dev guides, open an issue request with the tag [Dev Report]**
+
+
+[Testing] - This process is still undergoing testing, beware these may not work
+**these guides are either entirely untested or only tested on a select few devices, these guides may contain incomplete information, follow them at your own risk and please do not open issue requests for them**
+
 ## Guides
 
 ### [Stable] [Installing ChimeraOS on your ROG Ally](https://chimeraos.org/download/)
