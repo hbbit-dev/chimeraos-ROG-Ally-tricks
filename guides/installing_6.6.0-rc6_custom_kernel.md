@@ -10,6 +10,10 @@ This guide will provide the nessecary steps to install the ROG Ally Specific 6.6
 
 ### Step 2 - Install packages via Pacman
 
+First, if you have not before, you will need to run the following command...
+```sudo frzr-unlock```
+
+Once the system is unlocked, or if its already unlocked, run...
 ```sudo pacman -U *.pkg.tar.zst```
 
 ### Step 3 - Get the new kernel to boot
