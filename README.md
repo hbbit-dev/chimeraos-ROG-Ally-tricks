@@ -55,7 +55,7 @@ curl -L https://github.com/SteamDeckHomebrew/decky-installer/releases/latest/dow
 
 ## FAQ
 ### Q - Do I have to downgrade my Kernel for gyro controls?
-A - Things like gyro support are being worked on, and at the time of writing this, 6.5.2 is the most stable, go-to version which still supports gyro. The Kernels listed in this guide are all custom made specifically for the ROG Ally. At the time of writing this there is also a 6.6-rc4 kernel which also allows gyro. PLEASE NOTE: GYRO CONTROLS ONLY WORK ON EMULATED TITLES AT THE MOMENT
+A - Things like gyro support are being worked on, and at the time of writing this, 6.5.2 is the most stable, go-to version which still supports gyro. The Kernels listed in this guide are all custom made specifically for the ROG Ally. At the time of writing this there is also a 6.6.0-rc6 kernel which also allows gyro. PLEASE NOTE: GYRO CONTROLS ONLY WORK ON EMULATED TITLES AT THE MOMENT
 
 ### Q - How do I enable the rear paddle-buttons on the ROG Ally?
 A - At this time we do not have control over mapping these two buttons, it is on the list of things to get done but currently nobody is working on it to my knowledge. If you've got a little experience in C, give it a shot!
