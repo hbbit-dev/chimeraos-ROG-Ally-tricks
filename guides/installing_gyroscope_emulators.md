@@ -3,7 +3,7 @@
 ## Introduction:
 This will install required software to allow the bmi323 IMU to be used in Nintendo emulators (Switch/Wii U/3DS).
 
-Support outside emulators is a currently WIP feature.
+Support outside emulators is a currently WIP feature which will not be covered by this guide.
 
 ## Installation:
 To install required software you only need to download pre-built packages:
