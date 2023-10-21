@@ -6,7 +6,6 @@ This guide will provide the nessecary steps to install the ROG Ally Specific 6.6
 ```mkdir ~/kernel_6.6.0-rc6```
 ```cd ~/kernel_6.6.0-rc6```
 ```wget http://neroreflex.duckdns.org/linux-neroreflex-6.6.0.rc6.nrflx1-1-x86_64.pkg.tar.zst```
-TODO: LINK
 ```wget http://neroreflex.duckdns.org/linux-neroreflex-6.6.0.rc6.nrflx1-1-x86_64.pkg.tar.zst```
 
 ### Step 2 - Install packages via Pacman
@@ -29,7 +28,8 @@ Make sure to edit <your_deployment> with whatever your brtfs subvolume is!
 
 Then edit the already existing /boot/loader/loader.conf and add the following lines to the top of the file so that it will default to the newly installed kernel, also allowing you to also select the previous one in case of problems:
 
-```default frzr-neroreflex.conf
+```
+default frzr-neroreflex.conf
 timeout 3
 //rest of the code below
 ```
