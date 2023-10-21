@@ -33,7 +33,7 @@ EDIT: THIS IS NO LONGER TRUE, CHIMERA HAS UPDATED TO THE 6.5.3 KERNEL BY DEFAULT
 ### [Stable] [Installing Custom steam-patch (by @NeroReflex) & Updating HandyGCCS](https://github.com/bactaholic/chimeraos-ROG-Ally-tricks/blob/main/guides/installing_custom_steam_patch.md)
 The original version of steam-patch contains controller input fixes which conflict with the workaround for C State found [here](https://github.com/bactaholic/chimeraos-ROG-Ally-tricks/blob/main/repairing-b-state-behavior.md) as well as conflicting with HandyGCCS. This guide will install a custom version which removes the controller input fixes so HandyGCCS can handle them instead.
 
-### [Stable] [Enabling SSH Securely on ChimeraOS)[https://github.com/bactaholic/chimeraos-ROG-Ally-tricks/blob/main/guides/enabling_ssh_securely.md]
+### [Stable] (Enabling SSH Securely on ChimeraOS)[https://github.com/bactaholic/chimeraos-ROG-Ally-tricks/blob/main/guides/enabling_ssh_securely.md]
 ChimeraOS by default comes without an SSH Server setup, this is intentional, as all ChimeraOS installations contain the same default root password. This guide will show you how to change that password and setup SSH so you can run commands from another PC. This can be helpful with sending commands to your device, even when its in gamemode!
 
 ## Related Projects
