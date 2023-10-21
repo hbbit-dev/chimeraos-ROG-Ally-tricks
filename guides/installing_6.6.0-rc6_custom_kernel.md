@@ -33,7 +33,15 @@ initrd /amd-ucode.img
 initrd /initramfs-linux-neroreflex.img
 options root=LABEL=frzr_root rw rootflags=subvol=deployments/chimeraos-<your_deployment> quiet splash loglevel=3 rd.systemd.show_status=auto rd.udev.log_priority=3  ibt=off split_lock_detect=off iomem=relaxed amd-pstate=active nowatchdog
 ```
-Make sure to edit <your_deployment> with whatever your brtfs subvolume is!
+Make sure to edit <your_deployment> with whatever your brtfs subvolume is! To find your deployment use the following steps
+
+```sudo nano /boot/loader/entries/frzr.conf```
+
+check the last line in the file under options, you should see a path: deployments/chimeraos-xxxx, for example mine says
+
+```options root=LABEL=frzr_root rw rootflags=subvol=deployments/chimeraos-44-1_4b7363e...```
+
+so my active deployment is ```44-1_4b7363e```
 
 Then edit the already existing /boot/loader/loader.conf and add the following lines to the top of the file so that it will default to the newly installed kernel, also allowing you to also select the previous one in case of problems:
 
