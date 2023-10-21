@@ -1,7 +1,7 @@
-# Installing Gyroscope required services for emulators
+# Installing Gyroscope Required Services For Emulators
 
 ## Introduction:
-This will install required software to allow the bmi323 IMU to be used in Nintendo emulators (Switch/Wii U/3DS).
+This guide will cover how to get the remaining components installed and functioning gyro controls within Nintendo Emulators (Switch/Wii U/3DS), **Please note this will not work unless you've already upgraded your kernel to one which contains the BMI323 Kernel Driver, without this driver the gyro hardware within your device won't be recognized at all. If you have not updated to a kernel which contains this driver, please follow one of the other guides regarding Kernel upgrades first. All kernel guides included in this repo above version 6.5.2 will include the BMI323 Kernel Driver.**
 
 Support outside emulators is a currently WIP feature which will not be covered by this guide.
 

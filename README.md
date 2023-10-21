@@ -20,13 +20,11 @@ Please see the "installation" section of the ChimeraOS website for instructions 
 ### [Stable] [Repairing A and B State behavior on ROG Ally](https://github.com/bactaholic/chimeraos-ROG-Ally-tricks/blob/main/guides/repairing-b-state-behavior.md)
 When installing ChimeraOS on ROG Allys there are 3 possible states of operation. In state A the QAM/Steam buttons do not function except for on the first boot, any sleep/wake cycles break it. State B is indicated by a "light switch" type behavior, where every sleep/wake cycle toggles the buttons. Then there is state C where all buttons function all the time. This guide provides a workaround for A and B state ROG Allys to force C state behavior, though, with some quirks.
 
-### [Stable] [Installing Custom 6.5.2 Kernel w/ Gyro Support](TODO: LINK)
-PLEASE NOTE GYRO IS ONLY WORKING WITHIN NINTENDO EMULATORS AT THE TIME OF WRITING THIS (Oct. 9th 2023)
-This guide will show you how to install the 6.5.2 ROG Ally specific kernel with gyro support.
+### [Stable] [Installing Gyroscope In Emulators](https://github.com/bactaholic/chimeraos-ROG-Ally-tricks/blob/main/guides/installing_gyroscope_emulators.md)
+This guide will show you how to install the remaining required components to get gyro controls working within Nintedo Emulators. Please note that support outside of Nintendo Emulators is a Work in Progress.
 
-### [Dev] [Installing Custom 6.6-rc4 Kernel w/ Gyro Support](TODO: LINK)
-PLEASE NOTE GYRO IS ONLY WORKING WITHIN NINTENDO EMULATORS AT THE TIME OF WRITING THIS (Oct. 9th 2023)
-This guide will show you how to install the 6.6-rc4 ROG Ally specific kernel with gyro support.
+### [Dev] [Installing Custom 6.6.0-rc6 Kernel](https://github.com/bactaholic/chimeraos-ROG-Ally-tricks/blob/main/guides/installing_6.6.0-rc6_custom_kernel.md)
+This guide will show you how to install the 6.6.0-rc6 ROG Ally specific kernel with gyro support.
 
 ### [Stable] [Installing Custom 6.5.0 Kernel by @NeroReflex](https://github.com/bactaholic/chimeraos-ROG-Ally-tricks/blob/main/guides/installing_custom_6.5.0_kernel.md)
 ChimeraOS, at the time of writing this, installs with an older kernel, this 6.5.0 is compiled specifically for the ROG Ally and brings noticable performance improvements.
@@ -35,7 +33,7 @@ EDIT: THIS IS NO LONGER TRUE, CHIMERA HAS UPDATED TO THE 6.5.3 KERNEL BY DEFAULT
 ### [Stable] [Installing Custom steam-patch (by @NeroReflex) & Updating HandyGCCS](https://github.com/bactaholic/chimeraos-ROG-Ally-tricks/blob/main/guides/installing_custom_steam_patch.md)
 The original version of steam-patch contains controller input fixes which conflict with the workaround for C State found [here](https://github.com/bactaholic/chimeraos-ROG-Ally-tricks/blob/main/repairing-b-state-behavior.md) as well as conflicting with HandyGCCS. This guide will install a custom version which removes the controller input fixes so HandyGCCS can handle them instead.
 
-### [Stable] [Setting Up Secure SSH For Easy Access](TODO: LINK)
+### [Stable] [WIP] [Setting Up Secure SSH For Easy Access](TODO: LINK)
 ChimeraOS by default comes without an SSH Server setup, this is intentional, as all ChimeraOS installations contain the same default root password. This guide will show you how to change that password and setup SSH so you can run commands from another PC. This can be helpful with sending commands to your device, even when its in gamemode!
 
 ## Related Projects
