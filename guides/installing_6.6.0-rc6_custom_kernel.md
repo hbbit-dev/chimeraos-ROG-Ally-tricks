@@ -15,13 +15,24 @@ TODO: LINK
 
 ### Step 3 - Get the new kernel to boot
 
-```sudo nano /boot/loader/entries/frzr.conf```
+```sudo nano /boot/loader/entries/frzr-neroreflex.conf```
 
--Change the line "initrd /initramfs-linux.img" to say "initrd /initramfs-linux-chimeraos.img"
+And paste the following contents into it...
 
--Change the line "linux /vmlinuz-linux" to say "linux /vmlinuz-linux-chimeraos"
+```title chimeraos-<your_deployment>-nrflx gyro 
+linux /vmlinuz-linux-neroreflex
+initrd /amd-ucode.img
+initrd /initramfs-linux-neroreflex.img
+options root=LABEL=frzr_root rw rootflags=subvol=deployments/chimeraos-<your_deployment> quiet splash loglevel=3 rd.systemd.show_status=auto rd.udev.log_priority=3  ibt=off split_lock_detect=off iomem=relaxed amd-pstate=active nowatchdog
+```
+Make sure to edit <your_deployment> with whatever your brtfs subvolume is!
 
-### WARNING:
-***Triple check you spelled file correctly or IT WILL NOT BOOT AND THE CONSOLE WILL BE DEAD!!!***
+Then edit the already existing /boot/loader/loader.conf and add the following lines to the top of the file so that it will default to the newly installed kernel, also allowing you to also select the previous one in case of problems:
 
-After this step you should be able to reboot into the new kernel using ```systemctl reboot```. 
+```default frzr-neroreflex.conf
+timeout 3
+//rest of the code below
+```
+then simply reboot...
+
+```sudo systemctl reboot```
