@@ -23,9 +23,6 @@ When installing ChimeraOS on ROG Allys there are 3 possible states of operation.
 ### [Stable] [Installing Gyroscope In Emulators](https://github.com/bactaholic/chimeraos-ROG-Ally-tricks/blob/main/guides/installing_gyroscope_emulators.md)
 This guide will show you how to install the remaining required components to get gyro controls working within Nintedo Emulators. Please note that support outside of Nintendo Emulators is a Work in Progress.
 
-### [Dev] [Installing Custom 6.6.0-rc6 Kernel](https://github.com/bactaholic/chimeraos-ROG-Ally-tricks/blob/main/guides/installing_6.6.0-rc6_custom_kernel.md)
-This guide will show you how to install the 6.6.0-rc6 ROG Ally specific kernel with gyro support.
-
 ### [Stable] [Installing Custom 6.5.0 Kernel by @NeroReflex](https://github.com/bactaholic/chimeraos-ROG-Ally-tricks/blob/main/guides/installing_custom_6.5.0_kernel.md)
 ChimeraOS, at the time of writing this, installs with an older kernel, this 6.5.0 is compiled specifically for the ROG Ally and brings noticable performance improvements.
 EDIT: THIS IS NO LONGER TRUE, CHIMERA HAS UPDATED TO THE 6.5.3 KERNEL BY DEFAULT - SEE OTHER GUIDES
@@ -35,6 +32,12 @@ The original version of steam-patch contains controller input fixes which confli
 
 ### [Stable] [Enabling SSH Securely on ChimeraOS](https://github.com/bactaholic/chimeraos-ROG-Ally-tricks/blob/main/guides/enabling_ssh_securely.md)
 ChimeraOS by default comes without an SSH Server setup, this is intentional, as all ChimeraOS installations contain the same default root password. This guide will show you how to change that password and setup SSH so you can run commands from another PC. This can be helpful with sending commands to your device, even when its in gamemode!
+
+### [Dev] [Installing Custom 6.6.0-rc6 Kernel](https://github.com/bactaholic/chimeraos-ROG-Ally-tricks/blob/main/guides/installing_6.6.0-rc6_custom_kernel.md)
+This guide will show you how to install the 6.6.0-rc6 ROG Ally specific kernel with gyro support.
+
+### [Testing] [Installing NeroReflex's ROG Ally frzr Package](https://github.com/bactaholic/chimeraos-ROG-Ally-tricks/blob/main/guides/neroreflex_frzr_deploy_img.md)
+This guide will show you how to use frzr-deploy to install various tweaks and improvements that improve the performance of the system. Please note this is unstable at the time of writing this.
 
 ## Related Projects
 
@@ -46,7 +49,7 @@ ChimeraOS by default comes without an SSH Server setup, this is intentional, as 
 
 [EmuDeck](https://github.com/dragoonDorise/EmuDeck)
 
-## Helpful Comamnds
+## Helpful Commands
 
 Install DeckyLoader:
 ```sh
@@ -62,6 +65,18 @@ A - At this time we do not have control over mapping these two buttons, it is on
 
 ### Q - What is "A", "B" and "C" state?
 A - These are terms used to describe the sleep/wake functionality of a device.
+
         A State - All buttons work on boot, QAM and Steam buttons break after a sleep/wake cycle
-        B State - Same as before, but the QAM and Steam buttons work every other sleep/wake cycle, acting like a light switch, on and off.
+
+        B State - Same as before, but the QAM and Steam buttons work every other sleep/wake cycle acting like a light switch, on and off.
+
         C State - All buttons work all the time
+
+### Q - These guides have a lot of commands. Is there an easier way to send them to my ROG Ally?
+A - Yes, and the answer is...another guide! Check out the guide for [securely setting up ssh on an ROG Ally](https://github.com/bactaholic/chimeraos-ROG-Ally-tricks/blob/main/guides/enabling_ssh_securely.md), this will allow you to connect from another PC to send commands. Helpful when you want to be able to have the guide up on a larger screen, but still want to copy/paste commands!
+
+### Q - What is BMI323?
+A - You may see this term thrown around in these guides, it is the model ID of the gyroscopic sensor that the ROG Ally is built with. Currently gyro is working within Nintendo Emulators but as of writing this (Oct. 21st '23) support outside of Nintendo Emulators is a work in progress.
+
+### Q - What is frzr? 
+A - You'll probably use frzr commands at some point in your usage of ChimeraOS, frzr is a deployment and automatic update mechanism for operating systems. This allows for quick and easy installation of pre-built systems without interrupting the user. You can learn more on its github page [here](https://github.com/bactaholic/chimeraos-ROG-Ally-tricks/blob/main/guides/enabling_ssh_securely.md)

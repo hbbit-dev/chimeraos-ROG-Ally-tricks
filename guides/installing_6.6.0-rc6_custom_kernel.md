@@ -44,13 +44,17 @@ check the last line in the file under options, you should see a path: deployment
 
 so my active deployment is ```44-1_4b7363e```
 
-Then edit the already existing /boot/loader/loader.conf and add the following lines to the top of the file so that it will default to the newly installed kernel, also allowing you to also select the previous one in case of problems:
+Next, you need to set the new frzr-neroreflex.conf as the default boot entry. To do this, use the following command:
 
-```
-default frzr-neroreflex.conf
-timeout 3
-//rest of the code below
-```
+```sudo bootctl set-default "frzr-neroreflex.conf"```
+
 then simply reboot...
 
 ```sudo systemctl reboot```
+
+### Disclaimer
+If you reboot and none of the controls work, this is most likely because they've been blacklisted by accident. If this is the case, use the touch screen to navigate to the desktop and then run the following command...
+
+```sudo nano /etc/modprobe.d/xone-blacklist.conf```
+
+locate the line which says ```blacklist xpad``` and change it to ```#blacklist xpad```, this will comment out that code so it is ignored. Reboot the device and controls should work again.
