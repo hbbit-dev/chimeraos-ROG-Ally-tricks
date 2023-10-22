@@ -19,7 +19,12 @@ cd ~/scripts
 ```
 
 ## Step 3
-After creation, create a .sh script file, this can be named whatever you'd like. Fill the sh script with the following contents...
+Next we need to create a .sh file to which performs the workaround. to do this enter the following command:
+
+```nano sleep-workaround.sh```
+
+then fill that file with the following contents.
+
 ```
 /bin/bash -c "echo mem > /sys/power/state"
 sleep 1
@@ -33,21 +38,28 @@ fi
 ```
 
 and be sure to make it executable.
-```
-sudo chmod +x ~/scripts/yourShFileName.sh
-```
+
+```sudo chmod +x ~/scripts/sleep-workaround.sh```
 
 ## Step 4
 Run the following commands to install your .sh script to its final directory:
 ```
-install -Dm755 ~/scripts/yourShFileName.sh -t ${pkgdir}/usr/lib/systemd/system-sleep
+sudo install -Dm755 ~/scripts/sleep-workaround.sh -t ${pkgdir}/usr/lib/systemd/system-sleep
 ```
 ***If you make any changes to the script in ~/scripts, re-run this command to replace the old script.***
 
 ### Disclaimer:
 Some people have had issues with the previous installation method not running after waking the device from sleep. If the installation method described by step 4 does not work for you, then instead try the following:
 
-Create a new service file, for example myServiceFile.service, it can be named whatever you'd like. Fill the new service file with the following contents:
+Create a new service file. If you're not already in your scripts folder, get back to it with:
+
+```cd /home/gamer/scripts```
+
+then generate a new .service file:
+
+```nano sleep-workaround.service```
+
+and fill it with the following contents...
 
 ```
 [Unit]
@@ -55,16 +67,17 @@ Description=Try to get back the ROG Ally special keys
 After=sleep.target suspend.target
 
 [Service]
-ExecStart=~/scripts/yourShFileName.sh
+ExecStart=/home/gamer/scripts/sleep-workaround.sh
 
 [Install]
 WantedBy=sleep.target suspend.target
 ```
 
-then enable the service.
-```
-systemctl enable --now myServiceFile.service
-```
+then move the service to the correct file, and enable/start it with the following 2 commands:
+
+```sudo cp sleep-workaround.service /etc/systemd/system```
+
+```systemctl enable --now myServiceFile.service```
 
 ## Step 5
 Run the following command and make sure the contents of the folder match the contents below:
