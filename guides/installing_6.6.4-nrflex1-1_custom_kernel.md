@@ -1,18 +1,17 @@
-# DEPRICATED: THE LINKS IN THIS GUIDE ARE NO LONGER ACTIVE, BESIDES, THE NEWER KERNEL HAS TONS OF UPDATES AND FIXES THAT MAKE IT MORE SUITABLE FOR THE ROG ALLY INCLUDING AN N-KEY (Steam/QAM Buttons) FIX, PLEASE USE THAT INSTEAD
-
-
 # Introduction
 This guide will provide the nessecary steps to install the ROG Ally Specific 6.6.0-rc6 Kernel. The process is pretty simple, download the required packages and install them using pacman. **This kernel DOES contain the BMI323 Kernel Driver for Gyro controls, please see gyro guide for more details after installation if desired.**
 
 ### Step 1 - Download packages
 
-```mkdir ~/kernel_6.6.0-rc6```
+```mkdir ~/kernel_6.6.4```
 
-```cd ~/kernel_6.6.0-rc6```
+```cd ~/kernel_6.6.4```
 
-```wget http://neroreflex.duckdns.org/linux-neroreflex-6.6.0.rc6.nrflx1-1-x86_64.pkg.tar.zst```
+```wget https://github.com/NeroReflex/linux-chimeraos/releases/download/v6.6.4-fluke_v5-fix/linux-neroreflex-6.6.4.nrflx1-1-x86_64.pkg.tar.zst```
 
-```wget http://neroreflex.duckdns.org/linux-neroreflex-6.6.0.rc6.nrflx1-1-x86_64.pkg.tar.zst```
+```wget https://github.com/NeroReflex/linux-chimeraos/releases/download/v6.6.4-fluke_v5-fix/linux-neroreflex-api-headers-6.6.4.nrflx1-1-x86_64.pkg.tar.zst```
+
+```wget https://github.com/NeroReflex/linux-chimeraos/releases/download/v6.6.4-fluke_v5-fix/linux-neroreflex-headers-6.6.4.nrflx1-1-x86_64.pkg.tar.zst```
 
 ### Step 2 - Install packages via Pacman
 
