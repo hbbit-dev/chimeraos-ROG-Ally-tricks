@@ -1,5 +1,5 @@
 # Introduction
-This guide will provide the nessecary steps to install the ROG Ally Specific 6.6.0-rc6 Kernel. The process is pretty simple, download the required packages and install them using pacman. **This kernel DOES contain the BMI323 Kernel Driver for Gyro controls, please see gyro guide for more details after installation if desired.**
+This guide will provide the nessecary steps to install the ROG Ally Specific 6.6.4 Kernel. The process is pretty simple, download the required packages and install them using pacman. **This kernel DOES contain the BMI323 Kernel Driver for Gyro controls, please see gyro guide for more details after installation if desired.**
 
 ### Step 1 - Download packages
 
