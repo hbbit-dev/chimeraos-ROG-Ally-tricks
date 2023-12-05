@@ -23,7 +23,7 @@ When installing ChimeraOS on ROG Allys there are 3 possible states of operation.
 ### [Stable] [Installing Gyroscope In Emulators](https://github.com/bactaholic/chimeraos-ROG-Ally-tricks/blob/main/guides/installing_gyroscope_emulators.md)
 This guide will show you how to install the remaining required components to get gyro controls working within Nintedo Emulators. Please note that support outside of Nintendo Emulators is a Work in Progress.
 
-### [Stable] [Installing Custom 6.6.4 Kernel by @NeroReflex](https://github.com/bactaholic/chimeraos-ROG-Ally-tricks/blob/main/guides/installing_custom_6.5.0_kernel.md)
+### [Stable] [Installing Custom 6.6.4 Kernel by @NeroReflex](https://github.com/bactaholic/chimeraos-ROG-Ally-tricks/blob/main/guides/installing_6.6.0-rc6_custom_kernel.md)
 ChimeraOS, at the time of writing this, installs with an older kernel, this 6.6.4 is compiled specifically for the ROG Ally and brings noticable performance improvements including working Steam/QAM buttons
 
 ### [OLD - USE NEW KERNEL] [Installing Custom 6.5.0 Kernel by @NeroReflex](https://github.com/bactaholic/chimeraos-ROG-Ally-tricks/blob/main/guides/installing_custom_6.5.0_kernel.md)
